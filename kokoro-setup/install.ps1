@@ -1,6 +1,6 @@
 # Installs Kokoro-FastAPI natively on Windows. Run in PowerShell.
 $ErrorActionPreference = "Stop"
-$dir = if ($env:KOKORO_DIR) { $env:KOKORO_DIR } else { "$HOME\Kokoro-FastAPI" }
+$dir = if ($env:KOKORO_DIR) { $env:KOKORO_DIR } else { Join-Path $PSScriptRoot "Kokoro-FastAPI" }
 
 winget install -e --id astral-sh.uv
 winget install -e --id eSpeak-NG.eSpeak-NG
